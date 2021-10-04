@@ -2,7 +2,6 @@ package com.shop.shopws.controllers;
 
 import com.shop.shopws.dto.CartDTO;
 import com.shop.shopws.entities.Cart;
-import com.shop.shopws.entities.Item;
 import com.shop.shopws.services.CartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -32,8 +31,8 @@ public class CartController {
         return ResponseEntity.ok(cartService.edit(id, cartUpdated));
     }
 
-    @PutMapping("/add-item/{id}")
-    public ResponseEntity<CartDTO> addItem(@PathVariable("id") Long id) {
-        return ResponseEntity.ok(cartService.addItem(id, 1L));
+    @PatchMapping("/{id}")
+    public ResponseEntity<CartDTO> addItem(@PathVariable("id") Long id, @RequestParam Long itemId) {
+        return ResponseEntity.ok(cartService.addItem(id, itemId));
     }
 }

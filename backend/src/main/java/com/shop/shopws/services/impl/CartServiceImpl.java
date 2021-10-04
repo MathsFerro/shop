@@ -11,6 +11,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.Set;
+
 @Service
 public class CartServiceImpl implements CartService {
 
@@ -43,6 +45,7 @@ public class CartServiceImpl implements CartService {
         Cart cart = new Cart(findById(cartId));
         Item item = itemRepository.findById(itemId).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
         cart.getItems().add(item);
+
         return edit(cartId, cart);
     }
 }

@@ -1,1 +1,2 @@
 INSERT INTO tb_carts (created_at, updated_at) VALUES (current_timestamp, current_timestamp);
+INSERT INTO tb_items (created_at, description, updated_at, name, url) VALUES (current_timestamp, 'é caro', current_timestamp, 'Iphone X', 'www.google.com.br');
