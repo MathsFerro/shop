@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { CarouselModule } from 'primeng/carousel';
 
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
@@ -22,7 +23,8 @@ import { CartComponent } from './cart/cart.component';
     ShopRoutingModule,
     HttpClientModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    CarouselModule
   ],
   providers: [
     ShopService

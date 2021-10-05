@@ -1,8 +1,6 @@
 package com.shop.shopws.services.impl;
 
-import com.shop.shopws.dto.CartDTO;
 import com.shop.shopws.dto.ItemDTO;
-import com.shop.shopws.entities.Cart;
 import com.shop.shopws.entities.Item;
 import com.shop.shopws.repositories.CartRepository;
 import com.shop.shopws.repositories.ItemRepository;
@@ -46,4 +44,5 @@ public class ItemServiceImpl implements ItemService {
             return new ItemDTO(itemRepository.save(itemUpdated));
         }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
+
 }

@@ -20,8 +20,6 @@ export class ItemsComponent implements OnInit {
   findAllItems() {
     this.service.findAllItems().subscribe(resp => {
       this.items = resp.content;
-      console.log(this.items);
-      console.log(resp);
     }, error => {
       console.log(error);
     });

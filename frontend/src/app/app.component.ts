@@ -21,7 +21,7 @@ export class AppComponent {
 
   ngOnInit() {
     this.primengConfig.ripple = true;
-    
+
     this.items = [
       { label: "Home", icon: "pi pi-fw pi-home", command: () => this.route.navigate(["/"]) },
       { label: "Item", icon: "pi pi-fw pi-list", command: () => this.route.navigate(["/items"]) },

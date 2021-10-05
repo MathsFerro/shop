@@ -35,4 +35,6 @@ public class ItemController {
     public ResponseEntity<ItemDTO> findById(@Valid @PathVariable("id") Long id) {
         return ResponseEntity.ok(itemService.findById(id));
     }
+
+
 }
