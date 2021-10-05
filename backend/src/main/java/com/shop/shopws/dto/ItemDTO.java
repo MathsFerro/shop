@@ -18,6 +18,7 @@ public class ItemDTO {
     private Long id;
     private String name;
     private String description;
+    private Double price;
     private String url;
     @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     private LocalDateTime createdAt;
@@ -28,6 +29,7 @@ public class ItemDTO {
         this.id = entity.getId();
         this.name = entity.getName();
         this.description = entity.getDescription();
+        this.price = entity.getPrice();
         this.url = entity.getUrl();
         this.createdAt = entity.getCreatedAt();
         this.updatedAt = entity.getUpdatedAt();

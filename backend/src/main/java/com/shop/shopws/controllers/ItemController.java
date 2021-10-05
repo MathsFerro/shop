@@ -15,6 +15,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/item")
+@CrossOrigin("http://localhost:4200")
 public class ItemController {
 
     @Autowired

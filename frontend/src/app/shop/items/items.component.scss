@@ -1,0 +1,13 @@
+.container-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+
+  padding: 30px;
+
+  .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

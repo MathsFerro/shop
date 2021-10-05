@@ -1,1 +1,16 @@
-aa
+<div class="container-items">
+  <div class="item" *ngFor="let item of items"> 
+    <p-card header={{item.name}} subheader={{item.description}}>
+      <ng-template pTemplate="content">
+      </ng-template>
+        <!-- <img src="{{item.url}}" alt="{{item.name}}"> -->
+      <ng-template pTemplate="footer">
+        <div class="footer-container">
+          <h2>R$ {{item.price}}</h2>
+          <button pButton class="p-button-success" icon="pi pi-plus" (click)="addItem(item)"></button>        
+        </div>
+      </ng-template>
+    </p-card>
+  </div>
+  
+</div>
